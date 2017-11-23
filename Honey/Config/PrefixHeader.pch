@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  Honey
+//
+//  Created by 李高锋 on 16/9/22.
+//  Copyright © 2016年 GaoF. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//设备屏幕物理宽度
+#define ScreenWidth      [UIScreen mainScreen].bounds.size.width
+//设备屏幕物理高度
+#define ScreenHeight     [UIScreen mainScreen].bounds.size.height
+
+#define cellWidth  (ScreenWidth - 15 * 4) / 3
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#import "GPUImage.h"
+#import "UIView+GAView.h"
+#import "StringUtils.h"
+#import "NSString+Wrapper.h"
+
+#endif /* PrefixHeader_pch */
