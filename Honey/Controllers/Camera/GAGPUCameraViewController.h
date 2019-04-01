@@ -6,8 +6,9 @@
 //  Copyright © 2017年 GaoF. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GABaseViewController.h"
 
-@interface GAGPUCameraViewController : UIViewController
+
+@interface GAGPUCameraViewController : GABaseViewController
 
 @end

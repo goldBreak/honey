@@ -6,8 +6,9 @@
 //  Copyright © 2016年 GaoF. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GABaseViewController.h"
 
-@interface GAPhotosHandleViewController : UIViewController
+
+@interface GAPhotosHandleViewController : GABaseViewController
 
 @end

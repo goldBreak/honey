@@ -21,7 +21,6 @@
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
-#import "GPUImage.h"
 #import "UIView+GAView.h"
 #import "StringUtils.h"
 #import "NSString+Wrapper.h"

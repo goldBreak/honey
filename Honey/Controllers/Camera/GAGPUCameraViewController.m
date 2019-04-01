@@ -7,7 +7,7 @@
 //
 
 #import "GAGPUCameraViewController.h"
-#import "GPUImage.h"
+#import <GPUImage.h>
 #import "GPUImageBeautifyFilter.h"
 #import "GAImageEditView.h"
 #import "GAClectionView.h"
