@@ -66,7 +66,7 @@
 - (void)gotoImageLibrary:(UIButton *)button {
     
     GAPhotosHandleViewController *photosHandle = [[GAPhotosHandleViewController alloc] init];
-    [self.navigationController pushViewController:photosHandle animated:NO];
+    [self.navigationController pushViewController:photosHandle animated:YES];
 }
 
 @end
