@@ -12,7 +12,6 @@
 		973EDFB21D93B49700DAA468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 973EDFB11D93B49700DAA468 /* AppDelegate.m */; };
 		973EDFBA1D93B49700DAA468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973EDFB91D93B49700DAA468 /* Assets.xcassets */; };
 		973EDFCD1D93B75200DAA468 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973EDFC91D93B75200DAA468 /* ViewController.m */; };
-		973EDFD31D93C0EE00DAA468 /* GACameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973EDFD21D93C0EE00DAA468 /* GACameraViewController.m */; };
 		973EDFD91D93C5DE00DAA468 /* flashlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 973EDFD51D93C5DE00DAA468 /* flashlight@2x.png */; };
 		973EDFDA1D93C5DE00DAA468 /* flashlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 973EDFD61D93C5DE00DAA468 /* flashlight@3x.png */; };
 		973EDFDB1D93C5DE00DAA468 /* whiteback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 973EDFD71D93C5DE00DAA468 /* whiteback@2x.png */; };
@@ -60,6 +59,17 @@
 		97F730861E7BEA62006AF313 /* cameraIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97F730841E7BEA62006AF313 /* cameraIcon@2x.png */; };
 		97F730871E7BEA62006AF313 /* cameraIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97F730851E7BEA62006AF313 /* cameraIcon@3x.png */; };
 		9DF779542251EA4F00ED0B69 /* GABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779532251EA4F00ED0B69 /* GABaseViewController.m */; };
+		9DF779B72254A16100ED0B69 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF7799D2254A16100ED0B69 /* CanvasView.m */; };
+		9DF779B82254A16100ED0B69 /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779A02254A16100ED0B69 /* CaptureManager.m */; };
+		9DF779B92254A16100ED0B69 /* IFlyFaceResultTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779A32254A16100ED0B69 /* IFlyFaceResultTrack.m */; };
+		9DF779BA2254A16100ED0B69 /* IFlyFaceResultKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779A42254A16100ED0B69 /* IFlyFaceResultKeys.m */; };
+		9DF779BB2254A16100ED0B69 /* IFlyFaceResultDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779A52254A16100ED0B69 /* IFlyFaceResultDetector.m */; };
+		9DF779BC2254A16100ED0B69 /* IFlyFaceImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779AA2254A16100ED0B69 /* IFlyFaceImage.m */; };
+		9DF779BD2254A16100ED0B69 /* UIImage+compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779AB2254A16100ED0B69 /* UIImage+compress.m */; };
+		9DF779BE2254A16100ED0B69 /* CalculatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779AD2254A16100ED0B69 /* CalculatorTools.m */; };
+		9DF779BF2254A16100ED0B69 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779B12254A16100ED0B69 /* UIImage+Extensions.m */; };
+		9DF779C02254A16100ED0B69 /* PermissionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF779B42254A16100ED0B69 /* PermissionDetector.m */; };
+		9DF779C12254A16100ED0B69 /* Crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF779B52254A16100ED0B69 /* Crown.png */; };
 		C71EE70EE5F333CE28A22157 /* libPods-Honey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA93554D2D77CDFA7C165A9 /* libPods-Honey.a */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +84,6 @@
 		973EDFC81D93B75200DAA468 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		973EDFC91D93B75200DAA468 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		973EDFCF1D93B86000DAA468 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		973EDFD11D93C0EE00DAA468 /* GACameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GACameraViewController.h; sourceTree = "<group>"; };
-		973EDFD21D93C0EE00DAA468 /* GACameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GACameraViewController.m; sourceTree = "<group>"; };
 		973EDFD51D93C5DE00DAA468 /* flashlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight@2x.png"; sourceTree = "<group>"; };
 		973EDFD61D93C5DE00DAA468 /* flashlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight@3x.png"; sourceTree = "<group>"; };
 		973EDFD71D93C5DE00DAA468 /* whiteback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteback@2x.png"; sourceTree = "<group>"; };
@@ -153,6 +161,27 @@
 		9DF779522251EA4F00ED0B69 /* GABaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GABaseViewController.h; sourceTree = "<group>"; };
 		9DF779532251EA4F00ED0B69 /* GABaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GABaseViewController.m; sourceTree = "<group>"; };
 		9DF779552251EC4B00ED0B69 /* Honey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Honey.entitlements; sourceTree = "<group>"; };
+		9DF7799D2254A16100ED0B69 /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		9DF7799E2254A16100ED0B69 /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		9DF779A02254A16100ED0B69 /* CaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureManager.m; sourceTree = "<group>"; };
+		9DF779A12254A16100ED0B69 /* CaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureManager.h; sourceTree = "<group>"; };
+		9DF779A32254A16100ED0B69 /* IFlyFaceResultTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyFaceResultTrack.m; sourceTree = "<group>"; };
+		9DF779A42254A16100ED0B69 /* IFlyFaceResultKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyFaceResultKeys.m; sourceTree = "<group>"; };
+		9DF779A52254A16100ED0B69 /* IFlyFaceResultDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyFaceResultDetector.m; sourceTree = "<group>"; };
+		9DF779A62254A16100ED0B69 /* IFlyFaceResultKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyFaceResultKeys.h; sourceTree = "<group>"; };
+		9DF779A72254A16100ED0B69 /* IFlyFaceResultTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyFaceResultTrack.h; sourceTree = "<group>"; };
+		9DF779A82254A16100ED0B69 /* IFlyFaceResultDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyFaceResultDetector.h; sourceTree = "<group>"; };
+		9DF779AA2254A16100ED0B69 /* IFlyFaceImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyFaceImage.m; sourceTree = "<group>"; };
+		9DF779AB2254A16100ED0B69 /* UIImage+compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+compress.m"; sourceTree = "<group>"; };
+		9DF779AC2254A16100ED0B69 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		9DF779AD2254A16100ED0B69 /* CalculatorTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorTools.m; sourceTree = "<group>"; };
+		9DF779AE2254A16100ED0B69 /* IFlyFaceImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyFaceImage.h; sourceTree = "<group>"; };
+		9DF779AF2254A16100ED0B69 /* UIImage+compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+compress.h"; sourceTree = "<group>"; };
+		9DF779B02254A16100ED0B69 /* CalculatorTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorTools.h; sourceTree = "<group>"; };
+		9DF779B12254A16100ED0B69 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		9DF779B32254A16100ED0B69 /* PermissionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionDetector.h; sourceTree = "<group>"; };
+		9DF779B42254A16100ED0B69 /* PermissionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionDetector.m; sourceTree = "<group>"; };
+		9DF779B52254A16100ED0B69 /* Crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Crown.png; sourceTree = "<group>"; };
 		E6D2A3BE20823C56CFF3BDCD /* Pods-Honey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Honey/Pods-Honey.debug.xcconfig"; sourceTree = "<group>"; };
 		F9C2B81E78845719FC8DA0DB /* Pods-Honey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Honey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Honey/Pods-Honey.release.xcconfig"; sourceTree = "<group>"; };
 		FDA93554D2D77CDFA7C165A9 /* libPods-Honey.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Honey.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +225,7 @@
 		973EDFAC1D93B49700DAA468 /* Honey */ = {
 			isa = PBXGroup;
 			children = (
+				9DF779982254A16100ED0B69 /* lib */,
 				9DF779552251EC4B00ED0B69 /* Honey.entitlements */,
 				977BCDD31F2F7507007CBD97 /* Units */,
 				97EF0EDD1D951EF90025DCAF /* Library */,
@@ -274,8 +304,6 @@
 				97C8F1491F0C771700A6360C /* Model */,
 				97EAF3021F0B8802007A7D72 /* View */,
 				973EDFD41D93C38500DAA468 /* Sourse */,
-				973EDFD11D93C0EE00DAA468 /* GACameraViewController.h */,
-				973EDFD21D93C0EE00DAA468 /* GACameraViewController.m */,
 				977E31461DAB788400F923A1 /* GAPhotosHandleViewController.h */,
 				977E31471DAB788400F923A1 /* GAPhotosHandleViewController.m */,
 				97F730811E7BE65A006AF313 /* GAGPUCameraViewController.h */,
@@ -419,6 +447,90 @@
 			path = BaseViewComtroller;
 			sourceTree = "<group>";
 		};
+		9DF779982254A16100ED0B69 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				9DF7799A2254A16100ED0B69 /* FaceRecognition */,
+				9DF779B52254A16100ED0B69 /* Crown.png */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		9DF7799A2254A16100ED0B69 /* FaceRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				9DF7799B2254A16100ED0B69 /* tools */,
+			);
+			path = FaceRecognition;
+			sourceTree = "<group>";
+		};
+		9DF7799B2254A16100ED0B69 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				9DF7799C2254A16100ED0B69 /* CanvasView */,
+				9DF7799F2254A16100ED0B69 /* Capture */,
+				9DF779A22254A16100ED0B69 /* Result */,
+				9DF779A92254A16100ED0B69 /* Image */,
+				9DF779B22254A16100ED0B69 /* Permission */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		9DF7799C2254A16100ED0B69 /* CanvasView */ = {
+			isa = PBXGroup;
+			children = (
+				9DF7799D2254A16100ED0B69 /* CanvasView.m */,
+				9DF7799E2254A16100ED0B69 /* CanvasView.h */,
+			);
+			path = CanvasView;
+			sourceTree = "<group>";
+		};
+		9DF7799F2254A16100ED0B69 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				9DF779A02254A16100ED0B69 /* CaptureManager.m */,
+				9DF779A12254A16100ED0B69 /* CaptureManager.h */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		9DF779A22254A16100ED0B69 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				9DF779A32254A16100ED0B69 /* IFlyFaceResultTrack.m */,
+				9DF779A42254A16100ED0B69 /* IFlyFaceResultKeys.m */,
+				9DF779A52254A16100ED0B69 /* IFlyFaceResultDetector.m */,
+				9DF779A62254A16100ED0B69 /* IFlyFaceResultKeys.h */,
+				9DF779A72254A16100ED0B69 /* IFlyFaceResultTrack.h */,
+				9DF779A82254A16100ED0B69 /* IFlyFaceResultDetector.h */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		9DF779A92254A16100ED0B69 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				9DF779AA2254A16100ED0B69 /* IFlyFaceImage.m */,
+				9DF779AB2254A16100ED0B69 /* UIImage+compress.m */,
+				9DF779AC2254A16100ED0B69 /* UIImage+Extensions.h */,
+				9DF779AD2254A16100ED0B69 /* CalculatorTools.m */,
+				9DF779AE2254A16100ED0B69 /* IFlyFaceImage.h */,
+				9DF779AF2254A16100ED0B69 /* UIImage+compress.h */,
+				9DF779B02254A16100ED0B69 /* CalculatorTools.h */,
+				9DF779B12254A16100ED0B69 /* UIImage+Extensions.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		9DF779B22254A16100ED0B69 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				9DF779B32254A16100ED0B69 /* PermissionDetector.h */,
+				9DF779B42254A16100ED0B69 /* PermissionDetector.m */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
 		A701C2D84E5702E67D9F05B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,7 +589,7 @@
 				TargetAttributes = {
 					973EDFA91D93B49700DAA468 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = ZC9P3YJ2F3;
+						DevelopmentTeam = WUDEB57C7Q;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -517,6 +629,7 @@
 				973EDFDF1D93CFFA00DAA468 /* camera_nomal@2x.png in Resources */,
 				974646E11DC5DE45008679BA /* snow.png in Resources */,
 				973EDFE01D93CFFA00DAA468 /* camera_nomal@3x.png in Resources */,
+				9DF779C12254A16100ED0B69 /* Crown.png in Resources */,
 				973EDFDA1D93C5DE00DAA468 /* flashlight@3x.png in Resources */,
 				97050EB61E82A28400B410AA /* test.jpg in Resources */,
 				97EAF3071F0B8DF7007A7D72 /* nomal.jpg in Resources */,
@@ -626,32 +739,41 @@
 				97F2BD471F6BC00600E461C7 /* GAGuessBlurFileterModel.m in Sources */,
 				97B4F3A61F7253F1006FF152 /* StringUtils.m in Sources */,
 				97F2BD4A1F6CB74500E461C7 /* UIImage+Utils.m in Sources */,
+				9DF779BD2254A16100ED0B69 /* UIImage+compress.m in Sources */,
 				97F730801E7BDD6A006AF313 /* GPUImageBeautifyFilter.m in Sources */,
 				97B4F3A01F725393006FF152 /* CustomAlertView.m in Sources */,
 				97C8F1551F0C935800A6360C /* GACustomerSlider.m in Sources */,
+				9DF779BE2254A16100ED0B69 /* CalculatorTools.m in Sources */,
 				97A45A761DA7E83100DBED11 /* UIImage+GALibrary.m in Sources */,
 				97EF0EE81D951EF90025DCAF /* UIImage+DectorUtils.m in Sources */,
 				977BCDD91F2F768D007CBD97 /* GAClectionView.m in Sources */,
+				9DF779B72254A16100ED0B69 /* CanvasView.m in Sources */,
 				975B0A6E1F7D41150081775C /* GABoxBlurFilterModel.m in Sources */,
+				9DF779BB2254A16100ED0B69 /* IFlyFaceResultDetector.m in Sources */,
 				97C8F1521F0C8F1E00A6360C /* GABlurView.m in Sources */,
 				977BCDD61F2F7528007CBD97 /* UIView+GAView.m in Sources */,
+				9DF779BF2254A16100ED0B69 /* UIImage+Extensions.m in Sources */,
 				974646DE1DC5DCB9008679BA /* GAWelcome.m in Sources */,
 				97B4F3A51F7253F1006FF152 /* NSString+Wrapper.m in Sources */,
+				9DF779BC2254A16100ED0B69 /* IFlyFaceImage.m in Sources */,
 				973EDFCD1D93B75200DAA468 /* ViewController.m in Sources */,
 				977E31481DAB788400F923A1 /* GAPhotosHandleViewController.m in Sources */,
 				975B0A711F7D418B0081775C /* GAMotionBlurFileterModel.m in Sources */,
 				974646DA1DC5DC60008679BA /* GAWelcomeViewController.m in Sources */,
 				97EF0EE71D951EF90025DCAF /* CIImage+ImageUtils.m in Sources */,
+				9DF779B92254A16100ED0B69 /* IFlyFaceResultTrack.m in Sources */,
+				9DF779C02254A16100ED0B69 /* PermissionDetector.m in Sources */,
 				975B0A6B1F7D3CB00081775C /* GAImageFilterHandle.m in Sources */,
 				97C8F14C1F0C773900A6360C /* GACameraBaseFilterModel.m in Sources */,
 				973EDFB21D93B49700DAA468 /* AppDelegate.m in Sources */,
 				97B4F39D1F70A292006FF152 /* GAImageEditView.m in Sources */,
 				973EDFAF1D93B49700DAA468 /* main.m in Sources */,
 				97F730831E7BE65A006AF313 /* GAGPUCameraViewController.m in Sources */,
+				9DF779B82254A16100ED0B69 /* CaptureManager.m in Sources */,
 				97EAF3051F0B8911007A7D72 /* GAEffectView.m in Sources */,
+				9DF779BA2254A16100ED0B69 /* IFlyFaceResultKeys.m in Sources */,
 				97EF0EE61D951EF90025DCAF /* CIImage+DectorUtils.m in Sources */,
 				9DF779542251EA4F00ED0B69 /* GABaseViewController.m in Sources */,
-				973EDFD31D93C0EE00DAA468 /* GACameraViewController.m in Sources */,
 				97EF0EE91D951EF90025DCAF /* UIImage+ImageUtils.m in Sources */,
 				97C8F14F1F0C7E4200A6360C /* GAMaskInstance.m in Sources */,
 			);
@@ -750,7 +872,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ZC9P3YJ2F3;
+				DEVELOPMENT_TEAM = WUDEB57C7Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Honey/lib",
+				);
 				GCC_PREFIX_HEADER = "${SRCROOT}/Honey/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = Honey/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -761,10 +887,10 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.weimob.takeawayhocqa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weimob.takeaway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = takeawayhocqa_dev;
+				PROVISIONING_PROFILE_SPECIFIER = takeaway_dev;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -777,7 +903,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ZC9P3YJ2F3;
+				DEVELOPMENT_TEAM = WUDEB57C7Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Honey/lib",
+				);
 				GCC_PREFIX_HEADER = "${SRCROOT}/Honey/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = Honey/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -788,10 +918,10 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.weimob.takeawayhocqa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weimob.takeaway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = takeawayhocqa_dev;
+				PROVISIONING_PROFILE_SPECIFIER = takeaway_dev;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;

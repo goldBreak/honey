@@ -8,10 +8,10 @@
 
 #import "ViewController.h"
 
-#import "GACameraViewController.h"
 #import "GAPhotosHandleViewController.h"
 #import "GAGPUCameraViewController.h"
 #import "UIImage+Utils.h"
+#import "GAWelcome.h"
 
 @interface ViewController ()
 
@@ -25,7 +25,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBarHidden = YES;
     
-    self.view.layer.contents = (__bridge id _Nullable)([UIImage timeImage].CGImage);
+//    self.view.layer.contents = (__bridge id _Nullable)([UIImage timeImage].CGImage);
+    GAWelcome *welCome = [[GAWelcome alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:welCome];
     
     UIButton *gotoCamera = [UIButton buttonWithType:UIButtonTypeCustom];
     gotoCamera.frame = CGRectMake(0, 0, 100, 50);

@@ -24,9 +24,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    [GAWelcome showWelcomeOnView:self.window removeAfterDuration:3];
-    
+        
     ViewController *viewC = [[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewC];
     self.window.rootViewController = nav;

@@ -45,20 +45,20 @@
         
         self.layer.contents = (__bridge id _Nullable)([UIImage timeImage].CGImage);
         
-        switch ([compon month]) {
-        
-            case 11:
-            case 12:
-            case 1:
+//        switch ([compon month]) {
+//
+//            case 11:
+//            case 12:
+//            case 1:
             {
                 [self createSense];
             }
-                break;
-                
-            default:
-                
-                break;
-        }
+//                break;
+//
+//            default:
+//
+//                break;
+//        }
         
         
     }

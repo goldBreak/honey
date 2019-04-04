@@ -14,15 +14,33 @@
 #import "CustomAlertView.h"
 #import "GAImageFilterHandle.h"
 
-@interface GAGPUCameraViewController ()<imageViewProtocol>
+#import <AssetsLibrary/ALAssetsLibrary.h>
+#import <CoreMotion/CMMotionManager.h>
+#import "IFlyFaceImage.h"
+#import "CanvasView.h"
+#import "IFlyFaceResultKeys.h"
+#import "CalculatorTools.h"
+
+#import "UIImage+DectorUtils.h"
+#import "UIImage+ImageUtils.h"
+
+@interface GAGPUCameraViewController ()<imageViewProtocol,GPUImageVideoCameraDelegate>
 
 @property (nonatomic, strong) GPUImageStillCamera *videoCamera;
 @property (nonatomic, strong) GPUImageView *filterView;
 @property (nonatomic, assign) BOOL selected;
 @property (nonatomic, strong) GPUImageBeautifyFilter *beautifyFilter;
 
+@property (nonatomic, strong) GPUImageSobelEdgeDetectionFilter *sobelFilter;
+
+@property (nonatomic, strong) GPUImageSketchFilter *filter;
+
 @property (nonatomic, strong) GAImageEditView *imageView;
 @property (nonatomic, strong) GAClectionView *clectionView;
+
+@property (nonatomic, strong) UIImageView *crawImageView;
+
+@property (nonatomic, assign) NSInteger index;
 
 @end
 
@@ -35,9 +53,14 @@
     [self initCamera];
     [self initToolBar];
     
+    self.crawImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Crown.png"]];
+    self.crawImageView.hidden = YES;
+    [self.view insertSubview:self.crawImageView aboveSubview:self.filterView];
 }
 
+
 - (void)initToolBar {
+
     UIImage *flashImage = [UIImage imageNamed:@"flashlight"];
     UIImage *backImage = [UIImage imageNamed:@"whiteback"];
     
@@ -86,17 +109,31 @@
 - (void)initCamera {
     
     self.videoCamera = [[GPUImageStillCamera alloc] initWithSessionPreset:AVCaptureSessionPresetHigh cameraPosition:AVCaptureDevicePositionFront];
+
     self.videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
+
     self.videoCamera.horizontallyMirrorFrontFacingCamera = YES;
     self.filterView = [[GPUImageView alloc] initWithFrame:self.view.frame];
     self.filterView.center = self.view.center;
     
+//    self.filter = [[GPUImageGlassSphereFilter alloc] init];
+    
+//    self.filter = [[GPUImageSketchFilter alloc] init];
+//    self.filter.edgeStrength = 2.0;
+//    self.filter.texelWidth = 0.5;
+//    self.filter.texelHeight = 0.5;
     
     [self.view addSubview:self.filterView];
     [self.videoCamera addTarget:self.filterView];
     [self.videoCamera startCameraCapture];
     
     [self.videoCamera removeAllTargets];
+    
+//    self.sobelFilter = [[GPUImageSobelEdgeDetectionFilter alloc] init];
+//    self.sobelFilter.edgeStrength = 2.0;
+//    [self.videoCamera addTarget:self.filter];
+//    [self.filter addTarget:self.filterView];
+    
     self.beautifyFilter = [[GPUImageBeautifyFilter alloc] init];
     [self.videoCamera addTarget:self.beautifyFilter];
     [self.beautifyFilter addTarget:self.filterView];
@@ -231,6 +268,122 @@
 - (void)showToastWithMessage:(NSString *)message {
     CustomAlertView *alertView = [[CustomAlertView alloc] initWithToastMessage:message delegate:nil];
     [alertView showAlertViewOn:self.view];
+}
+
+- (void)willOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer {
+    
+    self.index += 1;
+    if (self.index != 10) {
+        return;
+    }
+    self.index = 0;
+    
+    UIImage *currentImage = [self imageFromSampleBuffer:sampleBuffer];
+   
+    NSArray *array = [currentImage getFacePropertys];
+
+    if (array && array.count > 0) {
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+//            self.crawImageView.hidden = NO;
+            
+            CGFloat scale = ScreenWidth / currentImage.size.width ;
+            
+            /*
+            CGAffineTransform transform = CGAffineTransformIdentity;
+            transform = CGAffineTransformScale(transform, 1, -1);
+            transform = CGAffineTransformTranslate(transform, 0, currentImage.size.height);
+            CIFaceFeature *face = array.firstObject;
+            CGRect frame = face.bounds;
+//            frame = CGRectApplyAffineTransform(frame, transform);
+            frame = [self viewWithFrame:frame scale:scale];
+            
+            CGRect imgFrame = self.crawImageView.frame;
+            imgFrame.origin.x = frame.origin.x;
+            imgFrame.origin.y = frame.origin.y ;//- imgFrame.size.height;
+            imgFrame.size.width = frame.size.width;
+            imgFrame.size.height = frame.size.width;
+            
+            self.crawImageView.frame = imgFrame;
+             */
+//            NSArray *array = [image getFacePropertys];
+            CGAffineTransform transform = CGAffineTransformIdentity;
+            transform = CGAffineTransformScale(transform, 1, -1);
+            transform = CGAffineTransformTranslate(transform, 0, -currentImage.size.height);
+            for (CIFaceFeature *face in array) {
+                CGRect frame = face.bounds;
+                frame = CGRectApplyAffineTransform(frame, transform);
+                
+                NSLog(@"%@",@(frame));
+                
+                UIView *sview = [self viewWithFrame:frame scale:scale];
+                [self.filterView addSubview:sview];
+            }
+
+        });
+        
+        
+    } else {
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            self.crawImageView.hidden = YES;
+        });
+        
+    }
+    
+}
+
+- (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer{
+    
+    //
+//    if (CMSampleBufferIsValid(sampleBuffer)) {
+//        return nil;
+//    }
+    CVPixelBufferRef pixelBuffer = (CVPixelBufferRef)CMSampleBufferGetImageBuffer(sampleBuffer);
+    
+    CIImage *ciImage = [CIImage imageWithCVPixelBuffer:pixelBuffer];
+    
+    UIImage *image = [UIImage imageWithCIImage:ciImage];
+    
+    return image;
+    
+    /*
+    // 为媒体数据设置一个CMSampleBuffer的Core Video图像缓存对象
+    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);// 锁定pixel buffer的基地址
+    CVPixelBufferLockBaseAddress(imageBuffer, 0);// 得到pixel buffer的基地址
+    void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);// 得到pixel buffer的行字节数
+    size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);// 得到pixel buffer的宽和高
+    size_t width = CVPixelBufferGetWidth(imageBuffer);
+    size_t height = CVPixelBufferGetHeight(imageBuffer);// 创建一个依赖于设备的RGB颜色空间
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();// 用抽样缓存的数据创建一个位图格式的图形上下文（graphics context）对象
+    CGContextRef context = CGBitmapContextCreate(baseAddress, width, height, 8,bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);// 根据这个位图context中的像素数据创建一个Quartz image对象
+    CGImageRef quartzImage = CGBitmapContextCreateImage(context);// 解锁pixel buffer
+    CVPixelBufferUnlockBaseAddress(imageBuffer,0);// 释放context和颜色空间
+    CGContextRelease(context);CGColorSpaceRelease(colorSpace);// 用Quartz image创建一个UIImage对象image
+    UIImage *image = [UIImage imageWithCGImage:quartzImage];// 释放Quartz image对象
+    CGImageRelease(quartzImage);
+    
+    return (image);
+     */
+    
+}
+
+
+
+- (UIView *)viewWithFrame:(CGRect)frame scale:(CGFloat)scale {
+    
+    
+    frame.origin.x *= scale;
+    frame.origin.y *= scale;
+    frame.size.width *= scale;
+    frame.size.height *= scale;
+    
+    UIView *view = [[UIView alloc] initWithFrame:frame];
+    view.backgroundColor = [UIColor clearColor];
+    view.layer.borderColor = [UIColor greenColor].CGColor;
+    view.layer.borderWidth = 0.5;
+    
+    return view;
 }
 
 @end

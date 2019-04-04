@@ -24,41 +24,33 @@ typedef void(^custormerBlock)(int i,int y);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     UIImage *image = [UIImage imageNamed:@"test.jpg"];
+   
+    
     CGFloat scale = ScreenWidth / image.size.width ;
     self.lastShowImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, image.size.height * scale)];
     
     [self.view addSubview:self.lastShowImageView];
-    NSArray *array = [image getFacePropertys];
-    CGAffineTransform transform = CGAffineTransformIdentity;
-    transform = CGAffineTransformScale(transform, 1, -1);
-    transform = CGAffineTransformTranslate(transform, 0, -image.size.height);
-    for (CIFaceFeature *face in array) {
-        CGRect frame = face.bounds;
-        frame = CGRectApplyAffineTransform(frame, transform);
-        UIView *view = [self viewWithFrame:frame scale:scale];
-        [self.lastShowImageView addSubview:view];
-    }
-    image = [[image noirEffectImage] edgedJudgeWithInstance:0.5];
-    self.lastShowImageView.image = image;
     
-//    
-//    GPUImageHalftoneFilter *filter = [[GPUImageHalftoneFilter alloc] init];
-//    [filter forceProcessingAtSize:image.size];
-//    [filter useNextFrameForImageCapture];
-//    
-//    GPUImagePicture *imageSOurce = [[GPUImagePicture alloc] initWithImage:image];
-//    [imageSOurce addTarget:filter];
-//    [imageSOurce processImage];
-//    
-//    UIImage *outPutImage = [filter imageFromCurrentFramebuffer];
-//    
-//    self.lastShowImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 50, ScreenWidth, ScreenHeight - 50)];
-//    self.lastShowImageView.contentMode = UIViewContentModeScaleAspectFill;
-//    self.lastShowImageView.image = outPutImage;
-//    [self.view addSubview:self.lastShowImageView];
-//    
+//    GPUImageBeautifyFilter 
+    
+//    NSArray *array = [image getFacePropertys];
+//    CGAffineTransform transform = CGAffineTransformIdentity;
+//    transform = CGAffineTransformScale(transform, 1, -1);
+//    transform = CGAffineTransformTranslate(transform, 0, -image.size.height);
+//    for (CIFaceFeature *face in array) {
+//        CGRect frame = face.bounds;
+//        frame = CGRectApplyAffineTransform(frame, transform);
+//        UIView *view = [self viewWithFrame:frame scale:scale];
+//        [self.lastShowImageView addSubview:view];
+//    }
+//    image = [[image noirEffectImage] edgedJudgeWithInstance:0.5];
+    /* */
+    
+    self.lastShowImageView.image = image;
 }
 
 
